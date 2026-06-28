@@ -12,11 +12,25 @@ Sistema de controlo IoT com Arduino e comunicação serial para a disciplina de 
 
 Sistema IoT para controlo de LEDs e buzzer via comunicação serial entre Arduino e computador. Inclui firmware Arduino (IoTController) com leitura de botões e resposta a comandos remotos, e programa host em C para envio de comandos e registro de eventos (identidade válida/inválida) com marcação temporal.
 
+## Requisitos
+
+| Ferramenta  | Versão mínima |
+| ----------- | ------------- |
+| GCC         | 9+            |
+| Make        | 4+            |
+| Arduino IDE | 2+            |
+
 ## Como executar
 
-**Arduino:** abrir o ficheiro `IoTController/IoTController.ino` no Arduino IDE e fazer upload.
+**Arduino:** abrir `IoTController/IoTController.ino` no Arduino IDE e fazer upload para a placa.
 
-**Host (C):** compilar com `make` e executar com o path do dispositivo serial como argumento (ex: `/dev/ttyUSB0`).
+**Host (C):**
+
+```bash
+make DEVICE=/dev/ttyUSB0
+```
+
+O valor padrão de `DEVICE` é `/dev/ttyUSB0`. Ajuste conforme a porta serial do sistema.
 
 ## Licença
 
