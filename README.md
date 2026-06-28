@@ -1,28 +1,30 @@
 # arduino-iot-control
 
-Sistema de controlo IoT com Arduino e comunicação serial para a disciplina de Arquitetura de Computadores.
+IoT control system with Arduino and serial communication for the Computer Architecture course.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da639.svg)](LICENSE)
-![Status](https://img.shields.io/badge/status-concluído-6f42c1)
+![Status](https://img.shields.io/badge/status-completed-6f42c1)
 
 [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](https://en.cppreference.com/w/c)
 [![Arduino](https://img.shields.io/badge/Arduino-00979D?logo=arduino&logoColor=white)](https://www.arduino.cc/)
 
-## Sobre
+[Portuguese](README.pt.md) | English
 
-Sistema IoT para controlo de LEDs e buzzer via comunicação serial entre Arduino e computador. Inclui firmware Arduino (IoTController) com leitura de botões e resposta a comandos remotos, e programa host em C para envio de comandos e registro de eventos (identidade válida/inválida) com marcação temporal.
+## About
 
-## Requisitos
+IoT system for controlling LEDs and a buzzer via serial communication between Arduino and computer. Includes Arduino firmware (IoTController) with button reading and response to remote commands, and a C host program for sending commands and logging events (valid/invalid identity) with timestamps.
 
-| Ferramenta  | Versão mínima |
-| ----------- | ------------- |
-| GCC         | 9+            |
-| Make        | 4+            |
-| Arduino IDE | 2+            |
+## Requirements
 
-## Como executar
+| Tool        | Minimum version |
+| ----------- | --------------- |
+| GCC         | 9+              |
+| Make        | 4+              |
+| Arduino IDE | 2+              |
 
-**Arduino:** abrir `IoTController/IoTController.ino` no Arduino IDE e fazer upload para a placa.
+## How to run
+
+**Arduino:** open `IoTController/IoTController.ino` in Arduino IDE and upload to the board.
 
 **Host (C):**
 
@@ -30,12 +32,12 @@ Sistema IoT para controlo de LEDs e buzzer via comunicação serial entre Arduin
 make DEVICE=/dev/ttyUSB0
 ```
 
-O valor padrão de `DEVICE` é `/dev/ttyUSB0`. Ajuste conforme a porta serial do sistema.
+The default `DEVICE` value is `/dev/ttyUSB0`. Adjust to your system's serial port.
 
-## Licença
+## License
 
-Distribuído sob a licença **MIT**, © 2024 Nycolas Souza.
+Distributed under the **MIT** license, © 2024 Nycolas Souza.
 
-É uma licença permissiva: qualquer pessoa pode usar, copiar, modificar e distribuir o código, inclusive em projetos comerciais, desde que mantenha o aviso de copyright e o texto da licença.
+It is a permissive license: anyone can use, copy, modify, and distribute the code, including in commercial projects, as long as the copyright notice and license text are retained.
 
-O texto completo está em [LICENSE](LICENSE).
+The full text is in [LICENSE](LICENSE).
