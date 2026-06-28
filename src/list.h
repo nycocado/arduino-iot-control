@@ -1,6 +1,6 @@
 #pragma once
 
-#include <stdbool.h> 
+#include <stdbool.h>
 #include <stddef.h>
 
 typedef struct List_* List;
@@ -39,9 +39,19 @@ void list_to_array(List list, void** out_array);
 
 int list_count_all(List list, bool (*equal)(void*, void*), void* element);
 
-int list_remove_all(List list, bool (*equal_element)(void*, void*), void (*free_element)(void*), void* element);
+int list_remove_all(
+    List list,
+    bool (*equal_element)(void*, void*),
+    void (*free_element)(void*),
+    void* element
+);
 
-int list_remove_duplicates(List list, bool (*equal_element)(void*, void*), void (*free_element)(void*), void* element);
+int list_remove_duplicates(
+    List list,
+    bool (*equal_element)(void*, void*),
+    void (*free_element)(void*),
+    void* element
+);
 
 List list_join(List list1, List list2);
 
